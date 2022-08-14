@@ -5,6 +5,9 @@ típusú elemeket tartalmazó tömböt és egy tetszőleges primitív értéket!
 - A függvény neve `checker` legyen!
 - A függvény __visszatérési értéke__ egy objektum, amely a következő 
 property-ket tartalmazza:
+
+
+
 - `exists`: Értéke true/false attól függően, hogy a második paraméterként 
 megadott érték megtalálható-e a tömbben
 - `index`: Értéke egy szám; ha a második paraméterként megadott érték 
@@ -15,3 +18,14 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+const checker = (myArray, valueToFind) => ({
+  exists: myArray.includes(valueToFind),
+  index: myArray.findIndex(element => element === valueToFind),
+  allElementsAreNumbers: myArray.every(
+    element => typeof element === "number"
+  ),
+  someElementsAreNumbers: myArray.some(
+    element => typeof element === "number"
+  ),
+});
