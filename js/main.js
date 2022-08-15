@@ -15,9 +15,10 @@ const generateListnemjo = (myArray) => {
 
 
 const generateList = (myArray) => `<ul>
-                      ${myArray.map(element => `
-                           <li>${element}</li>`)}
+                      ${(myArray.map(element => `
+                           <li>${element}</li>`)).join('')}
                       </ul>`;
+
                     
 
 
