@@ -7,12 +7,17 @@
 - A HTML-template egy lista, amelynek a listaelemei a kapott tömb értékeit
   tartalmazzák.
 */
-const generateList = (myArray) => {
-    return ("<ul>" + (myArray.forEach(element => ( "<li>" + element + "</li>"
-        
-    ))) + "</ul>"
+const generateListnemjo = (myArray) => {
+  return (
+    "<ul>" + myArray.forEach((element) => "<li>" + element + "</li>") + "</ul>"
+  );
+};
 
-    )
-}
+
+const generateList = (myArray) => `<ul>
+                      ${myArray.map(element => `
+                           <li>${element}</li>`)}
+                      </ul>`;
+                    
 
 
